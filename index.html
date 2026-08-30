@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dijital Davetiye | QR'lı Dijital Düğün Davetiyesi</title>
+<meta name="description" content="QR'lı dijital düğün davetiyesi. Misafirleriniz QR kodu okutur, çektiği fotoğraflar ortak galeride anında toplanır. Şık, modern, pratik ve çevreci.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="bg-decor"></div>
+
+<header class="site-header" id="header">
+  <div class="container header-inner">
+    <a href="#top" class="logo">
+      <span class="logo-mark">DD</span>
+      <span class="logo-text">Dijital<em>Davetim</em></span>
+    </a>
+    <nav class="nav">
+      <a href="#ozellikler">Özellikler</a>
+      <a href="#nasil-calisir">Nasıl Çalışır</a>
+      <a href="#galeri">Ortak Galeri</a>
+      <a href="#ornekler">Örnekler</a>
+      <a href="#iletisim" class="nav-cta">Sipariş Ver</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">💌 QR'lı Dijital Düğün Davetiyesi</p>
+        <h1>Davetiyeniz<br>Artık <span class="accent">Dijital.</span></h1>
+        <p class="hero-sub">Şık, modern, pratik ve çevreci bir dokunuşla sevdiklerinizi en özel gününüze davet edin. Misafirleriniz QR kodu okutur, o güne ait fotoğraflar tek bir ortak galeride anında toplanır.</p>
+        <div class="hero-actions">
+          <a href="#iletisim" class="btn btn-primary">Hemen Başlayın</a>
+          <a href="#nasil-calisir" class="btn btn-ghost">Nasıl Çalışır?</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>4</strong><span>Kolay Adım</span></div>
+          <div><strong>%100</strong><span>Kağıt İsrafı Yok</span></div>
+          <div><strong>∞</strong><span>Paylaşılabilir Anı</span></div>
+        </div>
+      </div>
+      <div class="hero-stage">
+        <canvas id="scene3d"></canvas>
+        <p class="drag-hint">sürükleyip döndürün ↻</p>
+      </div>
+    </div>
+    <div class="scroll-cue"><span></span></div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="ozellikler">
+    <div class="container">
+      <p class="section-eyebrow">Neden Dijital Davetiye?</p>
+      <h2 class="section-title">Kağıt davetiyelere veda edin</h2>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon">🌿</div>
+          <h3>Çevreci</h3>
+          <p>Kağıt israfına son, doğaya katkı sağlayın. Her davetiye, geleceğe bırakılan küçük bir iyilik.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Pratik</h3>
+          <p>WhatsApp, sosyal medya ve e-posta ile kolayca paylaşın. Baskı, kargo, bekleme yok.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">✨</div>
+          <h3>Modern</h3>
+          <p>Şık, kişiselleştirilmiş tasarımlarımızla davetiyenizde fark yaratın.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>Ekonomik</h3>
+          <p>Uygun fiyatlı, kaliteli dijital davetiyelerle bütçenizi zorlamadan şıklığı yakalayın.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section-alt" id="nasil-calisir">
+    <div class="container">
+      <p class="section-eyebrow">4 Basit Adım</p>
+      <h2 class="section-title">Nasıl Çalışır?</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Bilgilerinizi Paylaşın</h3>
+          <p>Tarih, saat, mekan bilgilerinizi bize iletin.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Tasarımınızı Hazırlayalım</h3>
+          <p>Size özel dijital davetiyeniz hazırlanır.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Paylaşmaya Başlayın</h3>
+          <p>Davetiyenizi sevdiklerinizle kolayca paylaşın.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>Mutlu Anlarınızı Paylaşın</h3>
+          <p>Etkinlik sonrası fotoğraf ve videolarınız linkte toplanır.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHARED GALLERY -->
+  <section class="section gallery-feature" id="galeri">
+    <div class="container gallery-inner">
+      <div class="gallery-copy">
+        <p class="section-eyebrow">Anılarınız Kaybolmasın</p>
+        <h2 class="section-title">Tek Bir QR, Tüm Anılar</h2>
+        <p>Düğününüzde tüm konuklarınızın çektiği en özel kareleri QR kod teknolojisiyle anında tek bir dijital galeride toplayın. Misafirleriniz QR kodu okutarak fotoğraflarını kolayca yükler, en mutlu gününüzü herkesin gözünden ölümsüzleştirirsiniz.</p>
+        <ul class="check-list">
+          <li>QR kodu okutun, fotoğraf yükleyin</li>
+          <li>Anında ortak galeriye eklenir</li>
+          <li>Tüm konukların gözünden anılar tek yerde</li>
+          <li>Düğün sonrası tüm anılar keşfe hazır</li>
+        </ul>
+        <a href="#iletisim" class="btn btn-primary">Örnek Galeriyi İste</a>
+      </div>
+      <div class="gallery-visual">
+        <div class="qr-frame">
+          <div class="qr-pattern" aria-hidden="true"></div>
+          <p>QR Kodu Okut, Anı Bırak</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXAMPLES -->
+  <section class="section section-alt" id="ornekler">
+    <div class="container">
+      <p class="section-eyebrow">Mutlu Çiftlerimiz</p>
+      <h2 class="section-title">Örnek Davetiyeler</h2>
+      <div class="examples-grid">
+        <article class="example-card">
+          <div class="example-top">Merve &amp; Ahmet</div>
+          <p class="example-date">20 Temmuz 2026 · Garden Davet Salonu, Samsun</p>
+          <p class="example-desc">"Şık, modern, pratik ve çevreci" temasıyla hazırlanan dijital davetiye örneği.</p>
+        </article>
+        <article class="example-card">
+          <div class="example-top">Demet &amp; Murat</div>
+          <p class="example-date">12 Eylül 2026 · Samsun</p>
+          <p class="example-desc">QR kod ile katılım ve anında fotoğraf paylaşımı içeren unutulmaz bir düğün deneyimi.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / CTA -->
+  <section class="section cta-section" id="iletisim">
+    <div class="container cta-inner">
+      <h2>Özel gününüz için<br>ilk adımı atın.</h2>
+      <p>Bilgilerinizi paylaşın, size özel dijital davetiyenizi birlikte tasarlayalım.</p>
+      <div class="cta-actions">
+        <a href="https://www.instagram.com/dijital_davetimm/" target="_blank" rel="noopener" class="btn btn-primary">Instagram'dan Sipariş Ver</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="logo">
+      <span class="logo-mark">DD</span>
+      <span class="logo-text">Dijital<em>Davetim</em></span>
+    </div>
+    <p>QR'lı Dijital Düğün Davetiyesi &amp; Anılarınızı Bir Arada.</p>
+    <a href="https://www.instagram.com/dijital_davetimm/" target="_blank" rel="noopener">@dijital_davetimm</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
+
