@@ -39,15 +39,20 @@ orası yeterli; koyu ve krem bölümler aynı değişkenlerden besleniyor.
 Ürün ekranlarını yenilemek için canlı davetiyeyi telefon genişliğinde açıp ilgili
 bölümün ekran görüntüsünü alıp aynı dosya adıyla değiştirmek yeterli.
 
+## Canlı örnek bağlantısı — dikkat
+
+Hero'daki **"Canlı örneği aç"** düğmesi ve alt bilgideki bağlantı
+`https://diji-davetim.vercel.app/` adresine gidiyor; orada Dilara & Özkan örnek
+davetiyesi yayında. **Tanıtım sitesini aynı adrese kurarsanız bu bağlantı kendine
+döner.** O durumda örnek davetiyeyi ayrı bir alt alan adına (örn.
+`ornek.diji-davetim.com`) taşıyıp bağlantıyı güncelleyin. Aynı adres
+`<link rel="canonical">`, `og:url` ve JSON-LD içinde de geçiyor.
+
 ## Yapılacaklar — yayına almadan önce
 
-1. **Fiyatlar.** `index.html` içinde üç `plan__amt` bloğu `₺—` ve "fiyat eklenecek"
-   yazıyor. Rakamları girince alt satırdaki `<small>` metnini de güncelleyin
-   (örn. "etkinlik başına").
-2. **WhatsApp numarası.** `js/script.js` içinde `WA_NUMARA` boş. Ülke koduyla,
-   `+` ve boşluk olmadan yazın: `"905XXXXXXXXX"`. Boş kaldığı sürece WhatsApp
-   düğmeleri Instagram'a yönlenir — kırık bağlantı oluşmaz ama en hızlı dönüş
-   kanalı kapalı kalır.
+1. ~~Fiyatlar~~ ✅ 500 / 1.000 / 1.500 ₺ girildi.
+2. ~~WhatsApp numarası~~ ✅ `905424582012` girildi; hem HTML'e hem
+   `js/script.js` içindeki `WA_NUMARA` değişkenine yazıldı, hazır mesaj metniyle.
 3. **Referanslar.** "Gerçek düğünlerden" bölümündeki üç kart **yer tutucudur**
    (`quote--empty` sınıfı). Teslim ettiğiniz çiftlerden **izinli, gerçek** yorumları
    yazın ve `quote--empty` sınıfını kaldırın. Uydurma yorum yayınlamayın —

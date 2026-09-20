@@ -114,19 +114,14 @@
   /* ---------- WhatsApp ----------
      WA_NUMARA'yı ülke koduyla, + ve boşluk olmadan yaz: "905XXXXXXXXX".
      Boş kaldığı sürece düğmeler Instagram'a gider; kırık bağlantı oluşmaz. */
-  var WA_NUMARA = "";
+  var WA_NUMARA = "905424582012";
   var WA_MESAJ = "Merhaba, dijital davetiye hakkında bilgi almak istiyorum. " +
                  "Etkinlik türü: ... Tarih: ...";
 
   if (WA_NUMARA) {
     var href = "https://wa.me/" + WA_NUMARA + "?text=" + encodeURIComponent(WA_MESAJ);
     [document.getElementById("waBtn"), document.getElementById("waCard")]
-      .forEach(function (el) {
-        if (!el) return;
-        el.href = href;
-        var s = el.querySelector("strong");
-        if (s) s.textContent = "Mesaj gönder";
-      });
+      .forEach(function (el) { if (el) el.href = href; });
   } else {
     var b = document.getElementById("waBtn");
     if (b) b.querySelector("span").textContent = "Instagram'dan yaz";

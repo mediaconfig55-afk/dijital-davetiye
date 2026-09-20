@@ -33,7 +33,17 @@
   "serviceType":"Dijital davetiye, katılım bildirimi ve QR kodlu fotoğraf havuzu",
   "areaServed":{"@type":"Country","name":"Türkiye"},
   "url":"https://diji-davetim.vercel.app/",
-  "provider":{"@type":"Organization","name":"Diji Davetim","url":"https://diji-davetim.vercel.app/"}
+  "provider":{
+    "@type":"Organization","name":"Diji Davetim",
+    "url":"https://diji-davetim.vercel.app/",
+    "telephone":"+90 542 458 20 12",
+    "sameAs":["https://www.instagram.com/diji_davetim/"]
+  },
+  "offers":[
+    {"@type":"Offer","name":"Davetiye","price":"500","priceCurrency":"TRY"},
+    {"@type":"Offer","name":"Davetiye + Havuz","price":"1000","priceCurrency":"TRY"},
+    {"@type":"Offer","name":"Tam paket","price":"1500","priceCurrency":"TRY"}
+  ]
 }
 </script>
 </head>
@@ -72,7 +82,9 @@
       görüyorsunuz — düğün günü çekilen bütün kareler tek havuzda toplanıyor.</p>
       <div class="btn-row">
         <a href="#iletisim" class="btn btn--gold"><span>Davetiyeni kur</span></a>
-        <a href="#neler" class="btn btn--line"><span>Nasıl görünüyor?</span></a>
+        <!-- CANLI ÖRNEK: tanıtım sitesi bu adrese taşınırsa bu bağlantıyı değiştir -->
+        <a href="https://diji-davetim.vercel.app/" target="_blank" rel="noopener"
+           class="btn btn--line"><span>Canlı örneği aç &rarr;</span></a>
       </div>
       <div class="hero__trust">
         <span>2 dakikada hazır</span>
@@ -319,7 +331,7 @@
       <article class="plan rv">
         <h3>Davetiye</h3>
         <p class="plan__who">Davet göndermek ve kaç kişi geleceğini bilmek isteyenler için.</p>
-        <div class="plan__amt" data-price>₺—<small>fiyat eklenecek</small></div>
+        <div class="plan__amt">500 ₺<small>etkinlik başına</small></div>
         <ul>
           <li>Dijital davetiye · hazır tema</li>
           <li>Katılım bildirimi ve sayaç</li>
@@ -335,7 +347,7 @@
         <span class="plan__tag">En çok tercih edilen</span>
         <h3>Davetiye + Havuz</h3>
         <p class="plan__who">Hem daveti hem düğün günü çekilen bütün kareleri isteyenler için.</p>
-        <div class="plan__amt" data-price>₺—<small>fiyat eklenecek</small></div>
+        <div class="plan__amt">1.000 ₺<small>etkinlik başına</small></div>
         <ul>
           <li>Davetiye paketindeki her şey</li>
           <li>QR kodlu ortak fotoğraf havuzu</li>
@@ -350,7 +362,7 @@
       <article class="plan rv rv-3">
         <h3>Tam paket</h3>
         <p class="plan__who">Kına, nişan ve düğünü birlikte yapan, salonda hazır pano isteyenler için.</p>
-        <div class="plan__amt" data-price>₺—<small>fiyat eklenecek</small></div>
+        <div class="plan__amt">1.500 ₺<small>üç etkinlik birlikte</small></div>
         <ul>
           <li>Davetiye + Havuz paketindeki her şey</li>
           <li>Üç etkinlik için ayrı davetiye</li>
@@ -363,8 +375,9 @@
       </article>
     </div>
 
-    <p class="note center" style="margin-inline:auto">Fiyat, etkinlik tarihine ve misafir
-    sayısına göre değişiyor. Paketi sorun, aynı gün dönüş yapalım.</p>
+    <p class="note center" style="margin-inline:auto">Fiyatlara davetiyenin kurulumu,
+    sınırsız düzenleme ve düğün günü destek dahildir. Ek özel tasarım talepleri için
+    WhatsApp'tan yazın — aynı gün dönüş yapıyoruz.</p>
   </div>
 </section>
 
@@ -422,13 +435,13 @@
     <p class="lead rv rv-2">Etkinlik türünü ve tarihi yazmanız yeterli. Uygun paketi ve
     fiyatı aynı gün dönüyoruz.</p>
     <div class="btn-row rv rv-3">
-      <a class="btn btn--gold" id="waBtn" href="https://www.instagram.com/diji_davetim/" target="_blank" rel="noopener"><span>WhatsApp'tan yaz</span></a>
+      <a class="btn btn--gold" id="waBtn" href="https://wa.me/905424582012" target="_blank" rel="noopener"><span>WhatsApp'tan yaz</span></a>
       <a class="btn btn--line" href="https://www.instagram.com/diji_davetim/" target="_blank" rel="noopener"><span>Instagram'dan yaz</span></a>
     </div>
 
     <div class="ways">
-      <a class="way rv" id="waCard" href="https://www.instagram.com/diji_davetim/" target="_blank" rel="noopener">
-        <b>WhatsApp</b><strong>Numara eklenecek</strong><span>En hızlı dönüş buradan</span>
+      <a class="way rv" id="waCard" href="https://wa.me/905424582012" target="_blank" rel="noopener">
+        <b>WhatsApp</b><strong>0542 458 20 12</strong><span>En hızlı dönüş buradan</span>
       </a>
       <a class="way rv rv-2" href="https://www.instagram.com/diji_davetim/" target="_blank" rel="noopener">
         <b>Instagram</b><strong>@diji_davetim</strong><span>Örnek davetiyeler ve gerçek düğünler</span>
@@ -463,8 +476,9 @@
       <div>
         <h4>İletişim</h4>
         <ul>
+          <li><a href="https://wa.me/905424582012" target="_blank" rel="noopener">0542 458 20 12</a></li>
           <li><a href="https://www.instagram.com/diji_davetim/" target="_blank" rel="noopener">@diji_davetim</a></li>
-          <li><a href="#iletisim">Teklif al</a></li>
+          <li><a href="https://diji-davetim.vercel.app/" target="_blank" rel="noopener">Canlı örnek davetiye</a></li>
         </ul>
       </div>
     </div>
