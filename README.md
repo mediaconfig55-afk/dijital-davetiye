@@ -1,35 +1,83 @@
-# Dijital Davetiye — Tanıtım Sitesi
+# Diji Davetim — Satış ve Tanıtım Sitesi
 
-QR'lı dijital düğün davetiyesi hizmetini anlatan, etkileşimli 3D sahneli tek sayfalık tanıtım sitesi.
+Dijital davetiye, katılım bildirimi ve QR kodlu anı havuzu hizmetini satan tek
+sayfalık site. Build aracı, paket yöneticisi ve harici JS kütüphanesi yok — düz
+statik dosyalar.
 
-Instagram: [@dijital_davetimm](https://www.instagram.com/dijital_davetimm/)
+Instagram: [@diji_davetim](https://www.instagram.com/diji_davetim/)
 
-## İçerik
+## Konumlandırma
 
-- `index.html` — sayfanın tamamı (hero, özellikler, nasıl çalışır, ortak galeri, örnekler, iletişim)
-- `css/style.css` — tüm görsel tasarım
-- `js/script.js` — mobil menü, header scroll efekti, 3D sahne mantığı (Three.js kütüphanesi CDN üzerinden `index.html` içinde yükleniyor)
-- `assets/favicon.svg` — sekme ikonu
+Sitenin tek argümanı var ve her bölüm onu taşıyor: piyasada **davetiye hazırlayan
+ayrı, düğün fotoğrafı toplayan ayrı** hizmetler var; üçünü (davet + katılım + anı
+havuzu) aynı linkte birleştiren taraf bu. "Üç ayrı iş, tek platform" bölümü sitenin
+omurgası, çıkarılmamalı.
+
+Yazım kuralı: **her bölüm tek fikir anlatır.** Metin kısa, görsel iş yapar. Bir
+bölüme ikinci bir fikir eklemek gerekiyorsa yeni bölüm açılmalı.
+
+## Tasarım dili
+
+| | |
+|---|---|
+| Zemin | Krem `#f7f3ea`, koyu bölümlerde yıkık yeşil `#2f4237` |
+| Aksan | Altın `#b08a3e` — tek aksan, başka renk eklenmemeli |
+| Başlık | Cormorant Garamond 600 |
+| Gövde | Jost 300/400/500 |
+| Etiket | IBM Plex Mono, harf aralığı açık, büyük harf |
+
+Tüm değerler `css/style.css` başındaki `:root` bloğunda. Renk değiştirmek için
+orası yeterli; koyu ve krem bölümler aynı değişkenlerden besleniyor.
+
+## Görseller
+
+| Klasör | Ne | Kaynak |
+|---|---|---|
+| `assets/shots/` | Ürün ekranları: davetiye, program, katılım, galeri | **Kendi canlı davetiyenizden** çekildi (diji-davetim.vercel.app) |
+| `assets/img/` | Atmosfer fotoğrafları | Unsplash — ticari kullanıma açık, atıf zorunlu değil |
+
+Ürün ekranlarını yenilemek için canlı davetiyeyi telefon genişliğinde açıp ilgili
+bölümün ekran görüntüsünü alıp aynı dosya adıyla değiştirmek yeterli.
+
+## Yapılacaklar — yayına almadan önce
+
+1. **Fiyatlar.** `index.html` içinde üç `plan__amt` bloğu `₺—` ve "fiyat eklenecek"
+   yazıyor. Rakamları girince alt satırdaki `<small>` metnini de güncelleyin
+   (örn. "etkinlik başına").
+2. **WhatsApp numarası.** `js/script.js` içinde `WA_NUMARA` boş. Ülke koduyla,
+   `+` ve boşluk olmadan yazın: `"905XXXXXXXXX"`. Boş kaldığı sürece WhatsApp
+   düğmeleri Instagram'a yönlenir — kırık bağlantı oluşmaz ama en hızlı dönüş
+   kanalı kapalı kalır.
+3. **Referanslar.** "Gerçek düğünlerden" bölümündeki üç kart **yer tutucudur**
+   (`quote--empty` sınıfı). Teslim ettiğiniz çiftlerden **izinli, gerçek** yorumları
+   yazın ve `quote--empty` sınıfını kaldırın. Uydurma yorum yayınlamayın —
+   hem yanıltıcı olur hem fark edildiğinde güveni bitirir.
+4. **Sosyal paylaşım görseli.** `og:image` şu an `assets/img/hero.jpg` gösteriyor.
+   İdeali 1200×630 özel bir kapak hazırlayıp `assets/og.jpg` olarak koymak.
 
 ## Yerelde çalıştırma
 
-Herhangi bir build aracı gerekmez, düz statik dosyalardır. Örneğin:
-
 ```
-python3 -m http.server 8000
+python -m http.server 8000
 ```
 
-sonra tarayıcıda `http://localhost:8000` adresini açın.
+sonra `http://localhost:8000`.
 
-## GitHub Pages ile yayınlama
+## Yayınlama
 
-1. Bu klasördeki dosyaları GitHub reponuza yükleyin (kök dizine).
-2. Repo **Settings → Pages** sayfasından "Deploy from a branch", branch olarak `main` ve klasör olarak `/ (root)` seçin.
-3. Birkaç dakika içinde siteniz `https://<kullanici-adiniz>.github.io/<repo-adi>/` adresinde yayında olur.
+Statik olduğu için Vercel, Netlify veya GitHub Pages'e olduğu gibi yüklenir;
+build komutu gerekmez. Vercel'de "Other / No framework", output dizini kök.
 
-## İçeriği güncellemek
+## Koda dokunurken bilinmesi gerekenler
 
-- Metinleri değiştirmek için `index.html` içindeki ilgili bölümü düzenleyin.
-- Renkleri değiştirmek için `css/style.css` dosyasının en üstündeki `:root` değişkenlerini güncelleyin.
-- 3D sahnedeki davetiye kartındaki isim/tarih bilgisini değiştirmek için `js/script.js` içindeki `makeInviteTexture()` fonksiyonuna bakın.
-
+- **`.rv` sınıfı** "kaydırınca belirsin" demek. Efekt **opaklık değil yalnızca
+  kaydırma** kullanıyor. Bilerek böyle: opaklık kullanılsaydı JS aksadığında ya da
+  IntersectionObserver geç çalıştığında bölümler tamamen görünmez olurdu. Opaklığa
+  çevirmeyin.
+- **`[id]{scroll-margin-top:96px}`** sabit başlık içindir. Kaldırılırsa menüden
+  atlanan bölümün başlığı başlığın altında kalır.
+- **Hero paralaksı** yalnızca hero ekrandayken hesaplanır ve
+  `prefers-reduced-motion` açıkken tamamen kapanır.
+- **Sayaçlar** (`data-count`) hedef değeri HTML'de de taşır; JS çalışmazsa doğru
+  sayı zaten görünür.
+- `_yedek-orijinal/` eski siteyi tutuyor, güvenle silinebilir.

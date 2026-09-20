@@ -3,194 +3,478 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dijital Davetiye | QR'lı Dijital Düğün Davetiyesi</title>
-<meta name="description" content="QR'lı dijital düğün davetiyesi. Misafirleriniz QR kodu okutur, çektiği fotoğraflar ortak galeride anında toplanır. Şık, modern, pratik ve çevreci.">
+<title>Diji Davetim | Dijital Davetiye, Katılım Takibi ve QR Anı Havuzu</title>
+<meta name="description" content="Dijital düğün davetiyesi, katılım bildirimi ve QR kodlu ortak fotoğraf havuzu tek linkte. Baskı yok, kargo yok. Kaç kişi geleceğini davetiyenin içinden görün, misafirlerinizin çektiği tüm kareler tek yerde toplansın.">
+<link rel="canonical" href="https://diji-davetim.vercel.app/">
+<meta name="theme-color" content="#2f4237">
+<meta name="robots" content="index,follow">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Diji Davetim">
+<meta property="og:title" content="Davetiye, katılım ve anılar — tek linkte">
+<meta property="og:description" content="Dijital davetiye + katılım bildirimi + QR kodlu ortak fotoğraf havuzu. Baskı, kargo ve dağıtım derdi olmadan.">
+<meta property="og:url" content="https://diji-davetim.vercel.app/">
+<meta property="og:image" content="assets/img/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/hero.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add("js");</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"Service",
+  "name":"Diji Davetim — Dijital Davetiye ve QR Anı Havuzu",
+  "serviceType":"Dijital davetiye, katılım bildirimi ve QR kodlu fotoğraf havuzu",
+  "areaServed":{"@type":"Country","name":"Türkiye"},
+  "url":"https://diji-davetim.vercel.app/",
+  "provider":{"@type":"Organization","name":"Diji Davetim","url":"https://diji-davetim.vercel.app/"}
+}
+</script>
 </head>
 <body>
 
-<div class="bg-decor"></div>
+<a href="#main" class="skip">İçeriğe geç</a>
 
-<header class="site-header" id="header">
-  <div class="container header-inner">
-    <a href="#top" class="logo">
-      <span class="logo-mark">DD</span>
-      <span class="logo-text">Dijital<em>Davetim</em></span>
-    </a>
-    <nav class="nav">
-      <a href="#ozellikler">Özellikler</a>
-      <a href="#nasil-calisir">Nasıl Çalışır</a>
-      <a href="#galeri">Ortak Galeri</a>
-      <a href="#ornekler">Örnekler</a>
-      <a href="#iletisim" class="nav-cta">Sipariş Ver</a>
-    </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Menü">
-      <span></span><span></span><span></span>
+<header class="hdr" id="hdr">
+  <div class="wrap hdr__in">
+    <a href="#top" class="logo"><i aria-hidden="true"></i>Diji Davetim</a>
+    <button class="burger" id="burger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="nav">
+      <i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i>
     </button>
+    <nav class="nav" id="nav" aria-label="Ana menü">
+      <a href="#neler">Ne yapıyor</a>
+      <a href="#nasil">Nasıl çalışır</a>
+      <a href="#fiyat">Fiyatlar</a>
+      <a href="#sss">SSS</a>
+      <a href="#iletisim" class="btn btn--gold"><span>Hemen başla</span></a>
+    </nav>
   </div>
 </header>
 
-<main id="top">
+<main id="main">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <p class="eyebrow">💌 QR'lı Dijital Düğün Davetiyesi</p>
-        <h1>Davetiyeniz<br>Artık <span class="accent">Dijital.</span></h1>
-        <p class="hero-sub">Şık, modern, pratik ve çevreci bir dokunuşla sevdiklerinizi en özel gününüze davet edin. Misafirleriniz QR kodu okutur, o güne ait fotoğraflar tek bir ortak galeride anında toplanır.</p>
-        <div class="hero-actions">
-          <a href="#iletisim" class="btn btn-primary">Hemen Başlayın</a>
-          <a href="#nasil-calisir" class="btn btn-ghost">Nasıl Çalışır?</a>
-        </div>
-        <div class="hero-stats">
-          <div><strong>4</strong><span>Kolay Adım</span></div>
-          <div><strong>%100</strong><span>Kağıt İsrafı Yok</span></div>
-          <div><strong>∞</strong><span>Paylaşılabilir Anı</span></div>
-        </div>
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="top">
+  <div class="hero__bg" aria-hidden="true">
+    <img src="assets/img/hero.jpg" alt="" id="heroImg" fetchpriority="high">
+  </div>
+  <div class="wrap hero__in">
+    <div class="hero__copy">
+      <p class="kicker">Dijital davetiye · katılım · anı havuzu</p>
+      <h1 class="t-hero">Davetiye, katılım<br>ve <span class="em">anılar.</span><br>Tek linkte.</h1>
+      <p class="lead">Baskı yok, kargo yok. Kaç kişi geleceğini davetiyenin içinden
+      görüyorsunuz — düğün günü çekilen bütün kareler tek havuzda toplanıyor.</p>
+      <div class="btn-row">
+        <a href="#iletisim" class="btn btn--gold"><span>Davetiyeni kur</span></a>
+        <a href="#neler" class="btn btn--line"><span>Nasıl görünüyor?</span></a>
       </div>
-      <div class="hero-stage">
-        <canvas id="scene3d"></canvas>
-        <p class="drag-hint">sürükleyip döndürün ↻</p>
-      </div>
-    </div>
-    <div class="scroll-cue"><span></span></div>
-  </section>
-
-  <!-- FEATURES -->
-  <section class="section" id="ozellikler">
-    <div class="container">
-      <p class="section-eyebrow">Neden Dijital Davetiye?</p>
-      <h2 class="section-title">Kağıt davetiyelere veda edin</h2>
-      <div class="feature-grid">
-        <article class="feature-card">
-          <div class="feature-icon">🌿</div>
-          <h3>Çevreci</h3>
-          <p>Kağıt israfına son, doğaya katkı sağlayın. Her davetiye, geleceğe bırakılan küçük bir iyilik.</p>
-        </article>
-        <article class="feature-card">
-          <div class="feature-icon">⚡</div>
-          <h3>Pratik</h3>
-          <p>WhatsApp, sosyal medya ve e-posta ile kolayca paylaşın. Baskı, kargo, bekleme yok.</p>
-        </article>
-        <article class="feature-card">
-          <div class="feature-icon">✨</div>
-          <h3>Modern</h3>
-          <p>Şık, kişiselleştirilmiş tasarımlarımızla davetiyenizde fark yaratın.</p>
-        </article>
-        <article class="feature-card">
-          <div class="feature-icon">💰</div>
-          <h3>Ekonomik</h3>
-          <p>Uygun fiyatlı, kaliteli dijital davetiyelerle bütçenizi zorlamadan şıklığı yakalayın.</p>
-        </article>
+      <div class="hero__trust">
+        <span>2 dakikada hazır</span>
+        <span>Uygulama indirmek yok</span>
+        <span>Sınırsız düzenleme</span>
       </div>
     </div>
-  </section>
 
-  <!-- HOW IT WORKS -->
-  <section class="section section-alt" id="nasil-calisir">
-    <div class="container">
-      <p class="section-eyebrow">4 Basit Adım</p>
-      <h2 class="section-title">Nasıl Çalışır?</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <h3>Bilgilerinizi Paylaşın</h3>
-          <p>Tarih, saat, mekan bilgilerinizi bize iletin.</p>
+    <div class="hero__stage">
+      <div class="device device--float">
+        <img src="assets/shots/davetiye.png" width="615" height="915"
+             alt="Telefon ekranında açılmış dijital düğün davetiyesi: çiftin adı, tarih ve geri sayım">
+        <div class="device__tag">
+          <b data-count="147">147</b>
+          katılım bildirimi düştü
         </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <h3>Tasarımınızı Hazırlayalım</h3>
-          <p>Size özel dijital davetiyeniz hazırlanır.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <h3>Paylaşmaya Başlayın</h3>
-          <p>Davetiyenizi sevdiklerinizle kolayca paylaşın.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <h3>Mutlu Anlarınızı Paylaşın</h3>
-          <p>Etkinlik sonrası fotoğraf ve videolarınız linkte toplanır.</p>
+        <div class="device__tag device__tag--low">
+          <b data-count="428">428</b>
+          misafir fotoğrafı
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SHARED GALLERY -->
-  <section class="section gallery-feature" id="galeri">
-    <div class="container gallery-inner">
-      <div class="gallery-copy">
-        <p class="section-eyebrow">Anılarınız Kaybolmasın</p>
-        <h2 class="section-title">Tek Bir QR, Tüm Anılar</h2>
-        <p>Düğününüzde tüm konuklarınızın çektiği en özel kareleri QR kod teknolojisiyle anında tek bir dijital galeride toplayın. Misafirleriniz QR kodu okutarak fotoğraflarını kolayca yükler, en mutlu gününüzü herkesin gözünden ölümsüzleştirirsiniz.</p>
-        <ul class="check-list">
-          <li>QR kodu okutun, fotoğraf yükleyin</li>
-          <li>Anında ortak galeriye eklenir</li>
-          <li>Tüm konukların gözünden anılar tek yerde</li>
-          <li>Düğün sonrası tüm anılar keşfe hazır</li>
+<!-- ======================= ACI ======================= -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <p class="kicker">Tanıdık geliyor mu?</p>
+      <h2 class="t-1">Düğün hazırlığının<br>en yorucu <span class="em">üç anı</span></h2>
+    </div>
+    <div class="pains">
+      <article class="pain rv">
+        <p class="pain__q">“Kaç kişi geliyor?”</p>
+        <p>Salon soruyor, siz tahmin ediyorsunuz. Gelmeyene masa kuruluyor,
+        habersiz gelene sandalye aranıyor.</p>
+      </article>
+      <article class="pain rv rv-2">
+        <p class="pain__q">“Davetiyeyi elden mi vereceğiz?”</p>
+        <p>Baskı, zarf, kargo ve iki hafta sonu. Bir harf hatası çıkarsa
+        her şey en baştan.</p>
+      </article>
+      <article class="pain rv rv-3">
+        <p class="pain__q">“Fotoğrafları atar mısınız?”</p>
+        <p>Gecenin en güzel kareleri yüz farklı telefonda kalıyor.
+        İsteyen cevap alamıyor.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ÜÇ İŞ / ÜRÜN ======================= -->
+<section class="sec sec--tint" id="neler">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="kicker">Ne yapıyor</p>
+      <h2 class="t-1">Üç ayrı iş.<br>Tek <span class="em">platform.</span></h2>
+      <p class="lead">Davetiye hazırlayan ayrı, düğün fotoğrafı toplayan ayrı hizmetler var.
+      Üçünü aynı linkte birleştiren tarafta biz varız.</p>
+    </div>
+
+    <div class="row rv">
+      <div class="row__media">
+        <span class="row__deco" aria-hidden="true"></span>
+        <div class="row__shot">
+          <img src="assets/shots/davetiye.png" loading="lazy" width="615" height="915"
+               alt="Dijital davetiye ekranı: çiftin isimleri, tarih ve geri sayım sayacı">
+        </div>
+      </div>
+      <div>
+        <span class="row__n">01 — DAVET</span>
+        <h3 class="t-2">Tek bağlantı,<br>herkese aynı anda</h3>
+        <p class="lead">WhatsApp'tan gönderiyorsunuz, misafir dokunuyor, davetiye açılıyor.
+        İndirilecek uygulama, açılacak hesap yok.</p>
+        <ul>
+          <li>Saat değişti mi? Düzeltiyorsunuz, link aynı kalıyor</li>
+          <li>Geri sayım ve gün programı davetiyenin içinde</li>
+          <li>Konuma dokununca harita açılıyor</li>
         </ul>
-        <a href="#iletisim" class="btn btn-primary">Örnek Galeriyi İste</a>
       </div>
-      <div class="gallery-visual">
-        <div class="qr-frame">
-          <div class="qr-pattern" aria-hidden="true"></div>
-          <p>QR Kodu Okut, Anı Bırak</p>
+    </div>
+
+    <div class="row row--flip rv">
+      <div class="row__media">
+        <span class="row__deco" aria-hidden="true"></span>
+        <div class="row__shot">
+          <img src="assets/shots/katilim.png" loading="lazy"
+               alt="Katılım bildirimi ekranı: katılıyorum, katılmıyorum ve belirsiz seçenekleri">
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- EXAMPLES -->
-  <section class="section section-alt" id="ornekler">
-    <div class="container">
-      <p class="section-eyebrow">Mutlu Çiftlerimiz</p>
-      <h2 class="section-title">Örnek Davetiyeler</h2>
-      <div class="examples-grid">
-        <article class="example-card">
-          <div class="example-top">Merve &amp; Ahmet</div>
-          <p class="example-date">20 Temmuz 2026 · Garden Davet Salonu, Samsun</p>
-          <p class="example-desc">"Şık, modern, pratik ve çevreci" temasıyla hazırlanan dijital davetiye örneği.</p>
-        </article>
-        <article class="example-card">
-          <div class="example-top">Demet &amp; Murat</div>
-          <p class="example-date">12 Eylül 2026 · Samsun</p>
-          <p class="example-desc">QR kod ile katılım ve anında fotoğraf paylaşımı içeren unutulmaz bir düğün deneyimi.</p>
-        </article>
+      <div>
+        <span class="row__n">02 — KATILIM</span>
+        <h3 class="t-2">Tahmin etme.<br><span class="em">Bak.</span></h3>
+        <p class="lead">Misafir davetiyenin içinden katılımını bildiriyor, kaç kişi
+        geleceğini yazıyor. Bilgi anında panelinize düşüyor.</p>
+        <ul>
+          <li>Toplam sayı ve isim listesi tek ekranda</li>
+          <li>Nikâh, kına ve düğün için ayrı sayım</li>
+          <li>Salona tahmin değil rakam söylüyorsunuz</li>
+        </ul>
       </div>
     </div>
-  </section>
 
-  <!-- CONTACT / CTA -->
-  <section class="section cta-section" id="iletisim">
-    <div class="container cta-inner">
-      <h2>Özel gününüz için<br>ilk adımı atın.</h2>
-      <p>Bilgilerinizi paylaşın, size özel dijital davetiyenizi birlikte tasarlayalım.</p>
-      <div class="cta-actions">
-        <a href="https://www.instagram.com/dijital_davetimm/" target="_blank" rel="noopener" class="btn btn-primary">Instagram'dan Sipariş Ver</a>
+    <div class="row rv">
+      <div class="row__media">
+        <span class="row__deco" aria-hidden="true"></span>
+        <div class="row__shot">
+          <img src="assets/shots/galeri.png" loading="lazy"
+               alt="Anı fotoğrafları bölümü: misafirlerin yüklediği karelerin toplandığı ortak galeri">
+        </div>
+      </div>
+      <div>
+        <span class="row__n">03 — ANI HAVUZU</span>
+        <h3 class="t-2">Kimseden fotoğraf<br>istemeyeceksiniz</h3>
+        <p class="lead">Salona koyduğunuz QR kodu okutan her misafir çektiği kareyi
+        havuza bırakıyor. Düğün bitince havuz herkese açılıyor.</p>
+        <ul>
+          <li>Fotoğrafçının göremediği masalar, dans pisti, çocuklar</li>
+          <li>Video ve ses desteği, orijinal kalitede</li>
+          <li>Tek seferde toplu indirme</li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- ======================= NASIL ÇALIŞIR ======================= -->
+<section class="sec sec--dark" id="nasil">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <p class="kicker">Üç adım</p>
+      <h2 class="t-1">Kurulum <span class="em">iki dakika</span></h2>
+    </div>
+    <div class="steps">
+      <article class="step rv">
+        <div class="step__n">1</div>
+        <h3 class="t-3">Bilgileri verin</h3>
+        <p>İsimler, tarih, program saatleri ve salon konumu. Temayı birlikte seçiyoruz.</p>
+      </article>
+      <article class="step rv rv-2">
+        <div class="step__n">2</div>
+        <h3 class="t-3">Linki paylaşın</h3>
+        <p>Davetiyeniz tek bağlantı olarak elinize geçiyor. Katılım bildirimleri düşmeye başlıyor.</p>
+      </article>
+      <article class="step rv rv-3">
+        <div class="step__n">3</div>
+        <h3 class="t-3">QR'ı salona koyun</h3>
+        <p>Misafirler okutuyor, kareler havuza düşüyor. Gece bitince galeri herkese açılıyor.</p>
+      </article>
+    </div>
+    <div class="center">
+      <div class="btn-row">
+        <a href="#iletisim" class="btn btn--gold"><span>Tarihimi konuşalım</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ÖZELLİKLER ======================= -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="kicker">Kutunun içinde</p>
+      <h2 class="t-1">Her paketin<br><span class="em">ortak temeli</span></h2>
+    </div>
+    <div class="grid6 rv">
+      <div class="cell"><i aria-hidden="true">01</i><h3>Katılım bildirimi</h3>
+        <p>Kim geliyor, kaç kişiyle, hangi programa.</p></div>
+      <div class="cell"><i aria-hidden="true">02</i><h3>QR anı havuzu</h3>
+        <p>Fotoğraf ve videolar orijinal kalitede tek galeride.</p></div>
+      <div class="cell"><i aria-hidden="true">03</i><h3>Geri sayım</h3>
+        <p>Davetiyeyi açan herkes güne kalan süreyi görür.</p></div>
+      <div class="cell"><i aria-hidden="true">04</i><h3>Konum ve yol tarifi</h3>
+        <p>Tek dokunuşla harita. "Nerede bu salon" telefonu gelmez.</p></div>
+      <div class="cell"><i aria-hidden="true">05</i><h3>Anı defteri</h3>
+        <p>Misafirler dilek bırakır, hepsi sizde kalır.</p></div>
+      <div class="cell"><i aria-hidden="true">06</i><h3>Sınırsız düzenleme</h3>
+        <p>Bilgi değişti, link aynı. İkinci baskı yok.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ETKİNLİK TÜRLERİ ======================= -->
+<section class="sec sec--tint">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="kicker">Sadece düğün değil</p>
+      <h2 class="t-1">Davet olan<br><span class="em">her yerde</span></h2>
+    </div>
+    <div class="events">
+      <div class="events__ph rv">
+        <img src="assets/img/etkinlik.jpg" loading="lazy"
+             alt="Kalabalık bir kutlamada gelin ve damat misafirlerin arasında">
+        <div class="events__cap">
+          <p class="t-2" style="margin-bottom:6px">Tema değişir,<br>altyapı aynı kalır.</p>
+        </div>
+      </div>
+      <div class="chips rv rv-2">
+        <span>Düğün</span><span>Kına gecesi</span><span>Nişan</span><span>Söz</span>
+        <span>Sünnet</span><span>Mevlit</span><span>Doğum günü</span>
+        <span>Baby shower</span><span>Açılış</span><span>Kurumsal davet</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= REFERANSLAR ======================= -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <p class="kicker">Çiftler ne diyor</p>
+      <h2 class="t-1">Gerçek düğünlerden</h2>
+    </div>
+    <!-- DİKKAT: Aşağıdaki üç kart YER TUTUCUDUR. Uydurma yorum yayınlamayın —
+         teslim ettiğiniz çiftlerden izinli gerçek yorumları buraya yazın. -->
+    <div class="quotes">
+      <article class="quote quote--empty rv">
+        <p>Buraya teslim ettiğiniz bir çiftin kendi cümlesi gelecek.</p>
+        <cite>İsim · tarih · şehir</cite>
+      </article>
+      <article class="quote quote--empty rv rv-2">
+        <p>Fotoğraf havuzuyla ilgili bir yorum bu kartta çok iyi durur.</p>
+        <cite>İsim · tarih · şehir</cite>
+      </article>
+      <article class="quote quote--empty rv rv-3">
+        <p>Katılım sayısının işini kolaylaştırdığını söyleyen bir yorum buraya.</p>
+        <cite>İsim · tarih · şehir</cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FİYAT ======================= -->
+<section class="sec sec--tint" id="fiyat">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <p class="kicker">Paketler</p>
+      <h2 class="t-1">Etkinliğinize<br><span class="em">uygun paket</span></h2>
+      <p class="lead center">Farkları özellik sayısı değil, işin ne kadarını bize bıraktığınız.</p>
+    </div>
+
+    <div class="plans">
+      <article class="plan rv">
+        <h3>Davetiye</h3>
+        <p class="plan__who">Davet göndermek ve kaç kişi geleceğini bilmek isteyenler için.</p>
+        <div class="plan__amt" data-price>₺—<small>fiyat eklenecek</small></div>
+        <ul>
+          <li>Dijital davetiye · hazır tema</li>
+          <li>Katılım bildirimi ve sayaç</li>
+          <li>Geri sayım, konum, gün programı</li>
+          <li>Sınırsız düzenleme</li>
+          <li class="no">QR anı havuzu</li>
+          <li class="no">Baskılı QR panosu</li>
+        </ul>
+        <a href="#iletisim" class="btn btn--line"><span>Bu paketi sor</span></a>
+      </article>
+
+      <article class="plan plan--hero rv rv-2">
+        <span class="plan__tag">En çok tercih edilen</span>
+        <h3>Davetiye + Havuz</h3>
+        <p class="plan__who">Hem daveti hem düğün günü çekilen bütün kareleri isteyenler için.</p>
+        <div class="plan__amt" data-price>₺—<small>fiyat eklenecek</small></div>
+        <ul>
+          <li>Davetiye paketindeki her şey</li>
+          <li>QR kodlu ortak fotoğraf havuzu</li>
+          <li>Video ve ses desteği</li>
+          <li>Anı defteri · misafir mesajları</li>
+          <li>Toplu indirme</li>
+          <li class="no">Baskılı QR panosu</li>
+        </ul>
+        <a href="#iletisim" class="btn btn--gold"><span>Bu paketi sor</span></a>
+      </article>
+
+      <article class="plan rv rv-3">
+        <h3>Tam paket</h3>
+        <p class="plan__who">Kına, nişan ve düğünü birlikte yapan, salonda hazır pano isteyenler için.</p>
+        <div class="plan__amt" data-price>₺—<small>fiyat eklenecek</small></div>
+        <ul>
+          <li>Davetiye + Havuz paketindeki her şey</li>
+          <li>Üç etkinlik için ayrı davetiye</li>
+          <li>Size özel tasarım · hazır tema değil</li>
+          <li>Baskılı QR karşılama panosu</li>
+          <li>Masa kartı QR'ları</li>
+          <li>Düğün günü öncelikli destek</li>
+        </ul>
+        <a href="#iletisim" class="btn btn--line"><span>Bu paketi sor</span></a>
+      </article>
+    </div>
+
+    <p class="note center" style="margin-inline:auto">Fiyat, etkinlik tarihine ve misafir
+    sayısına göre değişiyor. Paketi sorun, aynı gün dönüş yapalım.</p>
+  </div>
+</section>
+
+<!-- ======================= SSS ======================= -->
+<section class="sec sec--dark" id="sss">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <p class="kicker">Sıkça sorulanlar</p>
+      <h2 class="t-1">Merak edilenler</h2>
+    </div>
+    <div class="faq" id="faq">
+      <div class="faq__i">
+        <button class="faq__q" aria-expanded="false">Yaşlı misafirlerim açabilir mi?<i aria-hidden="true">+</i></button>
+        <div class="faq__a"><div><p>Açabiliyorlar. İndirilecek uygulama, açılacak hesap ya da
+        şifre yok. Mesajdaki bağlantıya bir kez dokunuyorlar, davetiye telefonun kendi
+        tarayıcısında açılıyor.</p></div></div>
+      </div>
+      <div class="faq__i">
+        <button class="faq__q" aria-expanded="false">Dijital davetiye ciddiyetsiz durmaz mı?<i aria-hidden="true">+</i></button>
+        <div class="faq__a"><div><p>Kağıt davetiye iki gün durup kayboluyor; dijitali düğün
+        gününe kadar telefonda kalıyor. Tam pakette davetiyeniz hazır şablon değil,
+        size özel hazırlanıyor.</p></div></div>
+      </div>
+      <div class="faq__i">
+        <button class="faq__q" aria-expanded="false">Misafirler fotoğraf yüklemek için uygulama indirecek mi?<i aria-hidden="true">+</i></button>
+        <div class="faq__a"><div><p>Hayır. Kamerayı QR koda tutuyorlar, çıkan bağlantıya
+        dokunuyorlar, fotoğraflarını seçip yüklüyorlar. Üyelik yok.</p></div></div>
+      </div>
+      <div class="faq__i">
+        <button class="faq__q" aria-expanded="false">Fotoğraflar ne kadar saklanıyor, kimler görüyor?<i aria-hidden="true">+</i></button>
+        <div class="faq__a"><div><p>Havuz düğün boyunca yalnızca yükleme alacak şekilde açık
+        kalıyor, gece bitiminde galeriyi açıyoruz. Saklama süresi ve erişimin kime açık
+        olacağı sizin tercihinize göre belirleniyor.</p></div></div>
+      </div>
+      <div class="faq__i">
+        <button class="faq__q" aria-expanded="false">Bilgilerde değişiklik olursa?<i aria-hidden="true">+</i></button>
+        <div class="faq__a"><div><p>Düzeltiyoruz, bağlantı aynı kalıyor. Davetiyeyi daha önce
+        gönderdiyseniz bile herkes güncel halini görüyor.</p></div></div>
+      </div>
+      <div class="faq__i">
+        <button class="faq__q" aria-expanded="false">Ne kadar önceden hazırlanmalıyız?<i aria-hidden="true">+</i></button>
+        <div class="faq__a"><div><p>Kurulum iki dakika sürüyor. Yine de katılım sayısının
+        oturması için davetiyeyi düğünden en az üç hafta önce göndermenizi öneriyoruz.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= KAPANIŞ ======================= -->
+<section class="final" id="iletisim">
+  <div class="final__bg" aria-hidden="true"><img src="assets/img/kanit.jpg" loading="lazy" alt=""></div>
+  <div class="wrap">
+    <p class="kicker center rv">İletişim</p>
+    <h2 class="t-1 rv" style="margin-bottom:22px">Tarihiniz belliyse<br><span class="em">başlayalım.</span></h2>
+    <p class="lead rv rv-2">Etkinlik türünü ve tarihi yazmanız yeterli. Uygun paketi ve
+    fiyatı aynı gün dönüyoruz.</p>
+    <div class="btn-row rv rv-3">
+      <a class="btn btn--gold" id="waBtn" href="https://www.instagram.com/diji_davetim/" target="_blank" rel="noopener"><span>WhatsApp'tan yaz</span></a>
+      <a class="btn btn--line" href="https://www.instagram.com/diji_davetim/" target="_blank" rel="noopener"><span>Instagram'dan yaz</span></a>
+    </div>
+
+    <div class="ways">
+      <a class="way rv" id="waCard" href="https://www.instagram.com/diji_davetim/" target="_blank" rel="noopener">
+        <b>WhatsApp</b><strong>Numara eklenecek</strong><span>En hızlı dönüş buradan</span>
+      </a>
+      <a class="way rv rv-2" href="https://www.instagram.com/diji_davetim/" target="_blank" rel="noopener">
+        <b>Instagram</b><strong>@diji_davetim</strong><span>Örnek davetiyeler ve gerçek düğünler</span>
+      </a>
+      <div class="way rv rv-3">
+        <b>Çalışma saatleri</b><strong>Her gün 10.00 – 22.00</strong>
+        <span>Düğün günü destek saat sınırı olmadan</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="logo">
-      <span class="logo-mark">DD</span>
-      <span class="logo-text">Dijital<em>Davetim</em></span>
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__in">
+      <div>
+        <div class="logo"><i aria-hidden="true"></i>Diji Davetim</div>
+        <p style="max-width:36ch">Dijital davetiye, katılım bildirimi ve QR kodlu anı havuzu.
+        Baskı, kargo ve dağıtım derdi olmadan.</p>
+      </div>
+      <nav aria-label="Site menüsü">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="#neler">Ne yapıyor</a></li>
+          <li><a href="#nasil">Nasıl çalışır</a></li>
+          <li><a href="#fiyat">Fiyatlar</a></li>
+          <li><a href="#sss">SSS</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h4>İletişim</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/diji_davetim/" target="_blank" rel="noopener">@diji_davetim</a></li>
+          <li><a href="#iletisim">Teklif al</a></li>
+        </ul>
+      </div>
     </div>
-    <p>QR'lı Dijital Düğün Davetiyesi &amp; Anılarınızı Bir Arada.</p>
-    <a href="https://www.instagram.com/dijital_davetimm/" target="_blank" rel="noopener">@dijital_davetimm</a>
+    <div class="ftr__btm">
+      <span>&copy; <span id="yil">2026</span> Diji Davetim · Türkiye</span>
+      <span>Görseller: Unsplash</span>
+    </div>
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
-<script src="js/script.js"></script>
+<script src="js/script.js" defer></script>
 </body>
 </html>
-
