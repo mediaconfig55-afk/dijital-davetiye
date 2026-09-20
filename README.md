@@ -3,7 +3,7 @@
 Dijital davetiye, katılım bildirimi ve QR kodlu anı havuzu hizmetini satan site.
 Build aracı, paket yöneticisi ve harici JS kütüphanesi yok — düz statik dosyalar.
 
-- **Tanıtım sitesi:** `dijital-davetiye.vercel.app` (bu depo)
+- **Tanıtım sitesi:** <https://dijital-davetiye-web-site.vercel.app/> (bu depo)
 - **Canlı örnek davetiye:** `diji-davetim.vercel.app` (ayrı proje)
 - **Instagram:** [@diji_davetim](https://www.instagram.com/diji_davetim/)
 - **WhatsApp:** 0542 458 20 12
@@ -61,7 +61,7 @@ Tüm değerler `css/style.css` başındaki `:root` bloğunda.
    `mediaconfig55-afk/dijital-davetiye` deposunu içe aktar.
 2. **Framework Preset: Other**, Build Command **boş**, Output Directory **boş**
    (kök dizin). Statik site olduğu için build adımı yok.
-3. Deploy. Vercel `dijital-davetiye.vercel.app` adresini verir.
+3. Deploy. Site **https://dijital-davetiye-web-site.vercel.app/** adresinde yayında.
 4. **Adres farklı çıkarsa** şu dört yeri güncelle: `index.html` içindeki
    `canonical`, `og:url`, `og:image` ve JSON-LD'deki iki `url` alanı; bir de
    `kvkk.html` içindeki `canonical`.
