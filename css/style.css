@@ -261,8 +261,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   margin:0 0 20px;position:relative}
 .quote cite{font-style:normal;font-size:14px;color:var(--ink-soft);font-family:var(--f-mono);
   letter-spacing:.06em}
-.quote--empty{border-style:dashed;background:transparent}
-.quote--empty p{color:var(--ink-soft);opacity:.75}
+/* Taahhüt kartı: alıntı değil söz verdiğimiz şey. Tırnak işareti yerine
+   onay imi kullanılıyor ki müşteri yorumuyla karıştırılmasın. */
+.quote--promise::before{content:"\2713";font-family:var(--f-body);font-size:34px;
+  top:24px;right:26px;opacity:.28;font-weight:500}
+.quote--promise p{font-style:normal;font-family:var(--f-body);font-size:21px;
+  font-weight:500;letter-spacing:-.01em;padding-right:40px}
+.quote--promise cite{font-family:var(--f-body);letter-spacing:0;font-size:15px;
+  line-height:1.5;display:block;font-weight:300}
 
 /* ---------- fiyat ---------- */
 .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
