@@ -237,6 +237,20 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .cell h3{font-size:18px;font-weight:500;margin-bottom:8px}
 .cell p{margin:0;font-size:15px;color:var(--ink-soft);font-weight:300}
 
+/* ---------- temalar ----------
+   Beş telefon önizlemesi. Dar ekranda ızgara yerine yatay şerit olur;
+   şerit kendi kabında kayar, sayfa gövdesi yatay kaymaz. */
+.temalar{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-bottom:12px}
+.tema{margin:0;transition:var(--t)}
+.tema img{width:100%;border-radius:12px;border:1px solid var(--line-dark);
+  box-shadow:var(--shadow-m);transition:var(--t);background:#000}
+.tema:hover{transform:translateY(-8px)}
+.tema:hover img{box-shadow:var(--shadow-l);border-color:var(--gold-2)}
+.tema figcaption{padding-top:16px}
+.tema b{display:block;font-family:var(--f-display);font-size:23px;font-weight:600}
+.tema span{display:block;font-size:13.5px;color:var(--on-dark-soft);font-weight:300;
+  margin-top:3px;line-height:1.4}
+
 /* ---------- etkinlik türleri ---------- */
 .events{display:grid;grid-template-columns:1.4fr 1fr;gap:34px;align-items:stretch}
 .events__ph{border-radius:var(--r-lg);overflow:hidden;position:relative;min-height:340px}
@@ -359,6 +373,11 @@ a.way:hover{background:rgba(244,241,232,.12);transform:translateY(-5px);border-c
   .row--flip .row__media{order:0}
   .pains,.steps,.grid6,.quotes,.plans,.ways,.ftr__in{grid-template-columns:1fr 1fr}
   .grid6{border-radius:var(--r-lg)}
+  /* temalar: ızgara yerine kendi kabında kayan şerit */
+  .temalar{display:flex;overflow-x:auto;gap:18px;padding-bottom:14px;
+    scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+  .tema{flex:0 0 clamp(190px,46vw,240px);scroll-snap-align:start}
+  .tema:hover{transform:none}
 }
 @media (max-width:760px){
   body{font-size:16.5px}
