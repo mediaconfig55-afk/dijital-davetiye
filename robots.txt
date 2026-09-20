@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Yayin oncesi yedek ve gecici dosyalar taranmasin
+Disallow: /_yedek-orijinal/
+
+Sitemap: https://dijital-davetiye-web-site.vercel.app/sitemap.xml

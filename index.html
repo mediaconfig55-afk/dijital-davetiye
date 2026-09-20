@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diji Davetim | Dijital Davetiye, Katılım Takibi ve QR Anı Havuzu</title>
+<!-- Baslik aranan kelimeyle basliyor, marka sona: Google sonucunda ilk
+     30-35 karakter okunuyor ve "dijital davetiye" orada gorunmeli. -->
+<title>Dijital Davetiye | QR Anı Havuzu ve Katılım Takibi — Diji Davetim</title>
 <meta name="description" content="Dijital düğün davetiyesi, katılım bildirimi ve QR kodlu ortak fotoğraf havuzu tek linkte. Baskı yok, kargo yok. Kaç kişi geleceğini davetiyenin içinden görün, misafirlerinizin çektiği tüm kareler tek yerde toplansın.">
 <link rel="canonical" href="https://dijital-davetiye-web-site.vercel.app/">
 <meta name="theme-color" content="#2f4237">
@@ -46,6 +48,29 @@
     {"@type":"Offer","name":"Davetiye","price":"500","priceCurrency":"TRY"},
     {"@type":"Offer","name":"Davetiye + Havuz","price":"1000","priceCurrency":"TRY"},
     {"@type":"Offer","name":"Tam paket","price":"1500","priceCurrency":"TRY"}
+  ]
+}
+</script>
+
+<!-- FAQPage: cevaplar sayfada gorunen metinle birebir aynidir. Google
+     bunu zengin sonuc olarak gosterebiliyor. Sayfadaki SSS metnini
+     degistirirseniz burayi da guncelleyin, yoksa Google uyumsuzluk sayar. -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Yaşlı misafirlerim dijital davetiyeyi açabilir mi?",
+     "acceptedAnswer":{"@type":"Answer","text":"Açabiliyorlar. İndirilecek uygulama, açılacak hesap ya da şifre yok. Mesajdaki bağlantıya bir kez dokunuyorlar, davetiye telefonun kendi tarayıcısında açılıyor."}},
+    {"@type":"Question","name":"Dijital davetiye ciddiyetsiz durmaz mı?",
+     "acceptedAnswer":{"@type":"Answer","text":"Kağıt davetiye iki gün durup kayboluyor; dijitali düğün gününe kadar telefonda kalıyor. Tam pakette davetiyeniz hazır şablon değil, size özel hazırlanıyor."}},
+    {"@type":"Question","name":"Misafirler fotoğraf yüklemek için uygulama indirecek mi?",
+     "acceptedAnswer":{"@type":"Answer","text":"Hayır. Kamerayı QR koda tutuyorlar, çıkan bağlantıya dokunuyorlar, fotoğraflarını seçip yüklüyorlar. Üyelik yok."}},
+    {"@type":"Question","name":"Düğün fotoğrafları ne kadar saklanıyor, kimler görüyor?",
+     "acceptedAnswer":{"@type":"Answer","text":"Havuz düğün boyunca yalnızca yükleme alacak şekilde açık kalıyor, gece bitiminde galeriyi açıyoruz. Saklama süresi ve erişimin kime açık olacağı sizin tercihinize göre belirleniyor."}},
+    {"@type":"Question","name":"Davetiye bilgilerinde değişiklik olursa ne oluyor?",
+     "acceptedAnswer":{"@type":"Answer","text":"Düzeltiyoruz, bağlantı aynı kalıyor. Davetiyeyi daha önce gönderdiyseniz bile herkes güncel halini görüyor."}},
+    {"@type":"Question","name":"Dijital davetiye için ne kadar önceden hazırlanmalıyız?",
+     "acceptedAnswer":{"@type":"Answer","text":"Kurulum iki dakika sürüyor. Yine de katılım sayısının oturması için davetiyeyi düğünden en az üç hafta önce göndermenizi öneriyoruz."}}
   ]
 }
 </script>
@@ -559,7 +584,7 @@
     </div>
     <div class="ftr__btm">
       <span>&copy; <span id="yil">2026</span> Diji Davetim · Türkiye</span>
-      <span><a href="kvkk.html">KVKK ve Gizlilik</a> · Görseller: Unsplash</span>
+      <span><a href="/kvkk">KVKK ve Gizlilik</a> · Görseller: Unsplash</span>
     </div>
   </div>
 </footer>
