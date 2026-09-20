@@ -1,6 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "//": "cleanUrls kapali: acikken /x.html adresleri 308 yonlendiriyordu ve Google Search Console dosya dogrulamasi yonlendirme kabul etmiyor.",
   "cleanUrls": false,
   "trailingSlash": false,
   "redirects": [
