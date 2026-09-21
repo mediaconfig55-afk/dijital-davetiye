@@ -20,9 +20,10 @@
   --on-dark-soft:#b3bdb2;
 
   /* aksan */
-  --gold:#b08a3e;
+  --gold:#856419;
   --gold-2:#c9a227;
-  --gold-wash:rgba(176,138,62,.12);
+  --gold-wash:rgba(133,100,25,.12);
+  --ok:#1a7f4b;
 
   --line:rgba(34,39,31,.13);
   --line-dark:rgba(244,241,232,.16);
@@ -105,7 +106,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .btn span{position:relative;z-index:1}
 .btn--gold{background:var(--gold);color:#fff;border-color:var(--gold);
   box-shadow:0 10px 26px -12px rgba(176,138,62,.85)}
-.btn--gold:hover{background:#9a7833;border-color:#9a7833;transform:translateY(-2px);
+.btn--gold:hover{background:#6d5213;border-color:#6d5213;transform:translateY(-2px);
   box-shadow:0 16px 34px -14px rgba(176,138,62,.95)}
 .btn--line{border-color:var(--line);color:var(--ink)}
 .btn--line:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
@@ -350,7 +351,7 @@ a.way:hover{background:rgba(244,241,232,.12);transform:translateY(-5px);border-c
 .ftr{background:#1d281f;color:var(--on-dark-soft);padding-block:56px 34px;font-size:15px}
 .ftr__in{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:38px}
 .ftr .logo{color:var(--on-dark);margin-bottom:14px}
-.ftr h4{font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+.ftr h3{font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
   color:var(--gold-2);margin-bottom:16px;font-weight:500}
 .ftr li{margin-bottom:10px}
 .ftr a:hover{color:var(--gold-2)}
