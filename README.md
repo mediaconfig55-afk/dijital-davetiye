@@ -71,10 +71,12 @@ Tüm değerler `css/style.css` başındaki `:root` bloğunda.
 
 ## Yapılacaklar
 
-1. **KVKK metnini tamamla.** `kvkk.html` içinde altın zeminle işaretli üç alan var:
-   ticari unvan + adres, KVKK başvuru e-postası, ve fotoğrafların hangi sağlayıcıda
-   / hangi ülkede tutulduğu. Sonuncusu en kritik olanı. Metin bir taban metindir,
-   **yayına almadan önce bir hukukçuya okutun.**
+1. ~~KVKK metnini tamamla~~ ✅ Tamamlandı. Veri sorumlusu Diji Davetim olarak
+   tanımlandı, başvuru kanalı WhatsApp ve Instagram, altyapı sağlayıcıları
+   (Vercel ve Supabase, ikisi de ABD) ve yurt dışına aktarım açıkça yazıldı,
+   saklama süreleri bağlayıcı hâle getirildi.
+   **Şirket kurarsanız** 1. bölüme ticari unvanı eklemek gerekir. Metin bir
+   taban metindir; bir hukukçuya okutmanız hâlâ önerilir.
 2. **Gerçek müşteri yorumları.** "Söz veriyoruz" bölümündeki üç kart taahhüt
    kartıdır, müşteri yorumu değildir. Gerçek yorumlar gelince `index.html` içinde
    yorum satırına alınmış hazır blok var; onu açıp taahhüt kartlarını kaldırın.
