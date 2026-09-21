@@ -17,11 +17,11 @@
   --ink:#22271f;
   --ink-soft:#5e6459;
   --on-dark:#f4f1e8;
-  --on-dark-soft:#b3bdb2;
+  --on-dark-soft:#bcc6bb;
 
   /* aksan */
   --gold:#856419;
-  --gold-2:#c9a227;
+  --gold-2:#d0a92e;
   --gold-wash:rgba(133,100,25,.12);
   --ok:#1a7f4b;
 
@@ -305,7 +305,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .plan ul{margin:24px 0 30px;display:flex;flex-direction:column;gap:13px;flex:1}
 .plan li{position:relative;padding-left:28px;font-size:15.5px;font-weight:300}
 .plan li::before{content:"✓";position:absolute;left:0;top:0;color:var(--gold);font-weight:600}
-.plan li.no{color:#9a9a92}
+.plan li.no{color:#75756d}
 .plan li.no::before{content:"–";color:#c2c2b8}
 .plan .btn{width:100%}
 .note{margin-top:30px;font-size:14.5px;color:var(--ink-soft);font-weight:300;
