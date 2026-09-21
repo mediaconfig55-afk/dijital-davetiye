@@ -308,7 +308,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .plan li.no{color:#75756d}
 .plan li.no::before{content:"–";color:#c2c2b8}
 .plan .btn{width:100%}
-.note{margin-top:30px;font-size:14.5px;color:var(--ink-soft);font-weight:300;
+.note{margin-top:30px;font-size:14.5px;color:#585d53;font-weight:300;
   background:var(--gold-wash);border-radius:var(--r-lg);padding:18px 22px;max-width:74ch}
 
 /* ---------- SSS ---------- */
